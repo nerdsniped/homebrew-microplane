@@ -5,15 +5,16 @@
 class Microplane < Formula
   desc "The control plane for localhost."
   homepage "https://microplane.dev/"
-  version "0.0.4"
+  version "0.0.8"
 
   on_macos do
-    url "https://github.com/segiddins/microplane/releases/download/v0.0.4/microplane_Darwin_all.tar.gz"
-    sha256 "20d139933f48d27eeab30344c77c27860821273be36c593b69254a16cc0318b8"
+    url "https://github.com/nerdsniped/microplane/releases/download/v0.0.8/microplane_Darwin_all.tar.gz"
+    sha256 "6de9e1055acd3287835eeee0bf57f6740c4dc4a867cff47272a0091eb0591a55"
 
     def install
       # keep the other lines here
       # TODO: replace your-cli with your binary name
+      bin.install "microplane"
       man1.install "manpages"
       # keep the other lines here
     end
@@ -21,23 +22,25 @@ class Microplane < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/segiddins/microplane/releases/download/v0.0.4/microplane_Linux_arm64.tar.gz"
-      sha256 "f7cfbce445c29434365567140218b842c645db0b105c00b482c7e595c27dcee5"
+      url "https://github.com/nerdsniped/microplane/releases/download/v0.0.8/microplane_Linux_arm64.tar.gz"
+      sha256 "16dc12076049537a48b94641781aff0a8e139c5952aed5cee086b70c869ebd16"
 
       def install
         # keep the other lines here
         # TODO: replace your-cli with your binary name
+        bin.install "microplane"
         man1.install "manpages"
         # keep the other lines here
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/segiddins/microplane/releases/download/v0.0.4/microplane_Linux_x86_64.tar.gz"
-      sha256 "d26ee0a5cac8e0c20a3aee7a141b7e69a3ab0f5b7b8aeb1b6181909c01b16f63"
+      url "https://github.com/nerdsniped/microplane/releases/download/v0.0.8/microplane_Linux_x86_64.tar.gz"
+      sha256 "44d0347c9e7a909fbb71542e90447d0000c679efe06d9f82dfef09bb8fdf9b3d"
 
       def install
         # keep the other lines here
         # TODO: replace your-cli with your binary name
+        bin.install "microplane"
         man1.install "manpages"
         # keep the other lines here
       end
