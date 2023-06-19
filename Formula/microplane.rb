@@ -5,44 +5,35 @@
 class Microplane < Formula
   desc "The control plane for localhost."
   homepage "https://microplane.dev/"
-  version "0.0.8"
+  version "0.0.9"
 
   on_macos do
-    url "https://github.com/nerdsniped/microplane/releases/download/v0.0.8/microplane_Darwin_all.tar.gz"
-    sha256 "6de9e1055acd3287835eeee0bf57f6740c4dc4a867cff47272a0091eb0591a55"
+    url "https://github.com/nerdsniped/microplane/releases/download/v0.0.9/microplane_Darwin_all.tar.gz"
+    sha256 "b87b99b2c5a971e627251ff962f9da3ab247b8ea8760c75a3acf40cb9ce6c94e"
 
     def install
-      # keep the other lines here
-      # TODO: replace your-cli with your binary name
       bin.install "microplane"
       man1.install "manpages"
-      # keep the other lines here
     end
   end
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nerdsniped/microplane/releases/download/v0.0.8/microplane_Linux_arm64.tar.gz"
-      sha256 "16dc12076049537a48b94641781aff0a8e139c5952aed5cee086b70c869ebd16"
+      url "https://github.com/nerdsniped/microplane/releases/download/v0.0.9/microplane_Linux_arm64.tar.gz"
+      sha256 "fe9ece7d5b720e47923ee1402984e0f35adfd5030aef7da1dbffc6fb1ed4957a"
 
       def install
-        # keep the other lines here
-        # TODO: replace your-cli with your binary name
         bin.install "microplane"
         man1.install "manpages"
-        # keep the other lines here
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nerdsniped/microplane/releases/download/v0.0.8/microplane_Linux_x86_64.tar.gz"
-      sha256 "44d0347c9e7a909fbb71542e90447d0000c679efe06d9f82dfef09bb8fdf9b3d"
+      url "https://github.com/nerdsniped/microplane/releases/download/v0.0.9/microplane_Linux_x86_64.tar.gz"
+      sha256 "61edc9809438f1f5c78157530e0ee9c928cb93c55a2d43d246ec3b138c91afb2"
 
       def install
-        # keep the other lines here
-        # TODO: replace your-cli with your binary name
         bin.install "microplane"
         man1.install "manpages"
-        # keep the other lines here
       end
     end
   end
