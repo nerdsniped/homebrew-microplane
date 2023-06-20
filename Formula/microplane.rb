@@ -5,11 +5,11 @@
 class Microplane < Formula
   desc "The control plane for localhost."
   homepage "https://microplane.dev/"
-  version "0.0.9"
+  version "0.0.10"
 
   on_macos do
-    url "https://github.com/nerdsniped/microplane/releases/download/v0.0.9/microplane_Darwin_all.tar.gz"
-    sha256 "b87b99b2c5a971e627251ff962f9da3ab247b8ea8760c75a3acf40cb9ce6c94e"
+    url "https://github.com/nerdsniped/microplane/releases/download/v0.0.10/microplane_Darwin_all.tar.gz"
+    sha256 "09be45c0c628948a49f27d79a03775f060b46e26162a87cc2c8092a182dad2de"
 
     def install
       bin.install "microplane"
@@ -19,8 +19,8 @@ class Microplane < Formula
 
   on_linux do
     if Hardware::CPU.arm? && Hardware::CPU.is_64_bit?
-      url "https://github.com/nerdsniped/microplane/releases/download/v0.0.9/microplane_Linux_arm64.tar.gz"
-      sha256 "fe9ece7d5b720e47923ee1402984e0f35adfd5030aef7da1dbffc6fb1ed4957a"
+      url "https://github.com/nerdsniped/microplane/releases/download/v0.0.10/microplane_Linux_arm64.tar.gz"
+      sha256 "4cba3a0f78cc1f91a73f7ac4c36630e9e4b9aa05d3c24fc2688354a724fb36da"
 
       def install
         bin.install "microplane"
@@ -28,8 +28,8 @@ class Microplane < Formula
       end
     end
     if Hardware::CPU.intel?
-      url "https://github.com/nerdsniped/microplane/releases/download/v0.0.9/microplane_Linux_x86_64.tar.gz"
-      sha256 "61edc9809438f1f5c78157530e0ee9c928cb93c55a2d43d246ec3b138c91afb2"
+      url "https://github.com/nerdsniped/microplane/releases/download/v0.0.10/microplane_Linux_x86_64.tar.gz"
+      sha256 "af192eb4a87c5453bbf627f592ab1059d676cd8fa777e319533cd075e51d2c02"
 
       def install
         bin.install "microplane"
